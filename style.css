@@ -1866,10 +1866,10 @@ body.nav-active .nav__list-item:nth-child(10) {
     transform: scale(1.1);
 }
 #portfolio .portfolio-image.large-image {
-    height: 700px;
+    height: 200px;
 }
 #portfolio .portfolio-image.medium-image {
-    height: 550px;
+    height: 300px;
 }
 #portfolio .portfolio-image.small-image {
     height: 400px;
@@ -2274,3 +2274,47 @@ body.nav-active .nav__list-item:nth-child(10) {
     font-size: 1.5rem;
     transition: 0.2s linear;
 }  
+
+.skill-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.skill-logo {
+  width: 40px; /* Sesuaikan ukuran logo */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-logo:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip */
+.icon-wrapper::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.icon-wrapper:hover::after {
+  opacity: 1;
+}
