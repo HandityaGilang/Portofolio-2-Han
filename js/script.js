@@ -73,6 +73,11 @@
 		    fade: true,
 		    cssEase: 'none'
 		});
+		// Fungsi untuk menekan tombol arrow secara otomatis
+		setInterval(function() {
+			$('.testimonial-slider .slick-next').click(); // Menekan tombol panah kanan otomatis
+		}, 3000); // Ganti angka ini dengan interval waktu dalam milidetik (3000ms = 3 detik)
+	
 	});
  
 	// preloader
